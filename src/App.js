@@ -1,32 +1,32 @@
-import React, { Component } from 'react';
-import './App.css';
-import Header from './Components/Header/Header';
-import Container from './Components/Container/Container';
+import React, { Component } from 'react'
+import './App.css'
+import Header from './Components/Header/Header'
+import Container from './Components/Container/Container'
 
 class App extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
-      user: {},
-    };
-    this.updateUser = this.updateUser.bind(this);
+      user: {}
+    }
+    this.updateUser = this.updateUser.bind(this)
   }
 
   updateUser(user) {
     this.setState({
-      user,
-    });
+      user
+    })
   }
 
   render() {
-    const { user } = this.state;
+    const { user } = this.state
     return (
-      <div className="App">
+      <div className='App'>
         <Header user={user} updateUser={this.updateUser} />
         <Container user={user} />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
